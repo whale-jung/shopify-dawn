@@ -1,0 +1,197 @@
+{% style %}
+  /* padding */
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding-top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding-bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding-top }}px;
+        padding-bottom: {{ section.settings.padding-bottom }}px;
+    }
+  }
+
+  /* radio */
+  .section-{{ section.id }}-horizontal-flex {
+    display: flex;
+    justify-content: {{ section.settings.text-horizontal-alignment }};
+  }
+
+  /* select */
+  .section-{{ section.id }}-vertical-flex {
+    height: 300px;
+    background: #b3e7eeff;
+    display: flex;
+    align-items: {{ section.settings.text-vertical-alignment }};
+  }
+
+  /* color */
+  .section-{{ section.id }}-text-color {
+    color: {{ section.settings.text-highlight }};
+  }
+{% endstyle %}
+
+<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
+  <div class="section-{{ section.id }}-padding">
+    <h3>---------------- text/checkbox/range ----------------</h3>
+    {% comment %}
+      section.settings.[id]: 获取id对应字段的值
+    {% endcomment %}
+    {{ section.settings.introduction }}
+
+    <h3>---------------- radio ----------------</h3>
+
+    <div class="section-{{ section.id }}-horizontal-flex">
+      {{ section.settings['text-horizontal-alignment'] }}
+    </div>
+
+    <h3>---------------- select ----------------</h3>
+    <div class="section-{{ section.id }}-vertical-flex">
+      {{ section.settings['text-vertical-alignment'] }}
+    </div>
+
+    <h3>---------------- textarea ----------------</h3>
+    {{ section.settings['introduction-textarea'] }}
+
+    <h3>---------------- article ----------------</h3>
+    {{ section.settings.article }}
+
+    <h3>---------------- collection ----------------</h3>
+    {{ section.settings.collection }}
+
+    {% assign collection = collections[section.settings.featured_collection] %}
+
+    {% for product in collection.products %}
+      <p>{{ product.title }}</p>
+    {% endfor %}
+
+    <h3>---------------- color ----------------</h3>
+    <div class="section-{{ section.id }}-text-color">
+      {{ section.settings['color-test-text'] }}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "store-introduction",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "简介",
+      "id": "introduction",
+      "default": "this is a kitchen"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "default": true,
+      "label": "t:sections.rich-text.settings.full_width.label"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "label": "Top",
+      "id": "padding-top",
+      "min": 0,
+      "max": 24,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "label": "Bottom",
+      "id": "padding-bottom",
+      "min": 0,
+      "max": 24,
+      "unit": "px",
+      "default": 4
+    },
+    {
+      "type": "header",
+      "content": "horizontal layout"
+    },
+    {
+      "type": "radio",
+      "label": "text horizontal alignment",
+      "id": "text-horizontal-alignment",
+      "options": [
+        {
+          "label": "Left",
+          "value": "flex-start"
+        },
+        {
+          "label": "Center",
+          "value": "center"
+        },
+        {
+          "label": "Right",
+          "value": "flex-end"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "vertical layout"
+    },
+    {
+      "type": "select",
+      "label": "text vertical alignment",
+      "id": "text-vertical-alignment",
+      "options": [
+        {
+          "value": "flex-top",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "label": "textarea test",
+      "id": "introduction-textarea",
+      "default": "welcome"
+    },
+    {
+      "type": "article",
+      "label": "article",
+      "id": "article"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "color",
+      "id": "text-highlight",
+      "label": "text color",
+      "default": "#bbbde2ff"
+    },
+    {
+      "type": "text",
+      "id": "color-test-text",
+      "label": "测试color",
+      "default": "test color selector"
+    }
+  ],
+  "presets": [
+    {
+      "name": "store-introduction"
+    }
+  ]
+}
+{% endschema %}
