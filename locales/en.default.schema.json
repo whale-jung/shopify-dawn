@@ -1107,6 +1107,12 @@
         "menu_color_scheme": {
           "label": "Menu color scheme"
         },
+        "menu_underline_color": {
+          "label": "Menu underline color"
+        },
+        "catalog_underline_color": {
+          "label": "Catalog underline color"
+        },
         "sticky_header_type": {
           "label": "Sticky header",
           "options__1": {

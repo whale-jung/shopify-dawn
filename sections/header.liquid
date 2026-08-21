@@ -100,6 +100,22 @@
   }
 {%- endstyle -%}
 
+{%- style -%}
+  {%- if section.settings.menu_underline_color != blank -%}
+    .header__active-menu-item {
+      text-decoration-color: {{ section.settings.menu_underline_color }};
+    }
+  {%- endif -%}
+
+  {%- if section.settings.catalog_underline_color != blank -%}
+    /* Catalog 菜单项（handle 为 "catalog"）选中态下划线特殊色。
+       若菜单项改名导致失效，请检查其渲染出的 id（HeaderMenu-<handle>）并同步更新选择器。 */
+    #HeaderMenu-catalog .header__active-menu-item {
+      text-decoration-color: {{ section.settings.catalog_underline_color }};
+    }
+  {%- endif -%}
+{%- endstyle -%}
+
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
 {%- liquid
@@ -584,6 +600,18 @@
       "id": "menu_color_scheme",
       "label": "t:sections.header.settings.menu_color_scheme.label",
       "default": "scheme-1"
+    },
+    {
+      "type": "color",
+      "id": "menu_underline_color",
+      "label": "t:sections.header.settings.menu_underline_color.label",
+      "default": "#58acee"
+    },
+    {
+      "type": "color",
+      "id": "catalog_underline_color",
+      "label": "t:sections.header.settings.catalog_underline_color.label",
+      "default": "#65c466"
     },
     {
       "type": "header",

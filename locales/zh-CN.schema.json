@@ -987,6 +987,12 @@
         "menu_color_scheme": {
           "label": "菜单配色方案"
         },
+        "menu_underline_color": {
+          "label": "菜单下划线颜色"
+        },
+        "catalog_underline_color": {
+          "label": "Catalog 下划线颜色"
+        },
         "enable_customer_avatar": {
           "label": "﻿客户账户头像﻿﻿",
           "info": "仅在客户使用 Shop 登录时显示。[管理客户账户](/admin/settings/customer_accounts)"
