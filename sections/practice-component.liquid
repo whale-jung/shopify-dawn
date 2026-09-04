@@ -1,28 +1,50 @@
 <div>
-    {{ section.settings.practice_component }}
+  {{ section.settings.practice_component }}
 
-    {% form 'activate_customer_password', article %}
-        form_content
-    {% endform %}
+  {% form 'contact', class: 'contact-form' %}
+    {% if form.posted_successfully? %}
+      <p class="note">消息已发送</p>
+    {% endif %}
+
+    {% if form.errors %}
+      {{ form.errors | default_errors }}
+    {% endif %}
+
+    <label for="ContactFormName">姓名</label>
+    <input
+      type="text"
+      id="ContactFormName"
+      name="contact[name]"
+      value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+    >
+
+    <label for="ContactFormEmail">邮箱</label>
+    <input type="email" id="ContactFormEmail" name="contact[email]" required>
+
+    <label for="ContactFormMessage">留言</label>
+    <textarea id="ContactFormMessage" name="contact[body]" rows="5"></textarea>
+
+    <button type="submit">发送</button>
+  {% endform %}
 </div>
 
 {% schema %}
 {
-    "name": "Practice Component",
-    "tag": "section",
-    "class": "section",
-    "settings": [
-        {
-            "type": "text",
-            "id": "practice_component",
-            "label": "Practice Component",
-            "default": "Practice Component"
-        }
-    ],
-    "presets": [
-        {
-            "name": "practice-component"
-        }
-    ]
+  "name": "Practice Component",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "practice_component",
+      "label": "Practice Component",
+      "default": "Practice Component"
+    }
+  ],
+  "presets": [
+    {
+      "name": "practice-component"
+    }
+  ]
 }
 {% endschema %}
