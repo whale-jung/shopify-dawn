@@ -1,21 +1,19 @@
 <div>
-
+    {{ section.settings.practice_component }}
 </div>
 
 {% schema %}
 {
-  "name": "Practice Component",
-  "settings": [
-    {
-      "type": "header",
-      "content": "Practice Component"
-    },
-    {
-      "type": "text",
-      "id": "practice_text",
-      "label": "Practice Text",
-      "default": "This is a practice component."
-    }
-  ]
+    "name": "Practice Component",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "practice_component",
+            "label": "Practice Component",
+            "default": "Practice Component"
+        }
+    ]
 }
 {% endschema %}
