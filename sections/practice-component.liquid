@@ -75,8 +75,8 @@
   {% endfor %}
 
   {% comment %} paginate {% endcomment %}
-  {% paginate collections by 8 %}
-    {% for item in collections %}
+  {% paginate product by 2 %}
+    {% for item in product %}
       {{ item }}
     {% endfor %}
   {% endpaginate %}
