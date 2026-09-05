@@ -116,9 +116,10 @@
     echo message
   %}
 
+  {% comment %} raw {% endcomment %}
   {% raw %}
-{{ 2 | plus: 2 }} equals 4.
-{% endraw %}
+    {{ 2 | plus: 2 }} equals 4.
+    {% endraw %}
 </div>
 
 <script>
