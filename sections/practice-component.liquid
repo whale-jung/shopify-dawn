@@ -82,7 +82,12 @@
     {% endfor %}
   {% endpaginate %} {% endcomment %}
 
-  {% # expeer %}
+  {% # this is a comment %}
+  {% liquid
+    # this is a comment
+    assign topic = 'learning about comments'
+    echo topic
+  %}
 </div>
 
 <script>
