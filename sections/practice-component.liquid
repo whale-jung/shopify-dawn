@@ -30,6 +30,14 @@
 
     <button type="submit">ENTER</button>
   {% endform %}
+
+  {% for i in (1..5) %}
+    {% if i == 4 %}
+      {% break %}
+    {% else %}
+      {{ i }}
+    {% endif %}
+  {% endfor %}
 </div>
 
 <script>
