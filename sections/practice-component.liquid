@@ -75,12 +75,12 @@
   {% endfor %}
 
   {% comment %} paginate {% endcomment %}
-   {% assign paginate_data = (1..21) %}
+  {% comment %} {% assign paginate_data = (1..21) %}
   {% paginate paginate_data by 4 %}
     {% for item in paginate_data %}
       {{ item }}
     {% endfor %}
-  {% endpaginate %}
+  {% endpaginate %} {% endcomment %}
 </div>
 
 <script>
@@ -137,9 +137,9 @@
       "default": 3
     },
     {
-        "type": "product_list",
-        "id": "product_storage",
-        "label": "product storage",
+      "type": "product_list",
+      "id": "product_storage",
+      "label": "product storage"
     }
   ],
   "presets": [
