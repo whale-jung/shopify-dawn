@@ -75,8 +75,9 @@
   {% endfor %}
 
   {% comment %} paginate {% endcomment %}
-  {% paginate section.settings.product_storage by 2 %}
-    {% for item in section.settings.product_storage %}
+   {% assign paginate_data = (1..21) %}
+  {% paginate paginate_data by 2 %}
+    {% for item in paginate_data %}
       {{ item }}
     {% endfor %}
   {% endpaginate %}
