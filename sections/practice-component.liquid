@@ -48,16 +48,16 @@
     {% if reminder == 0 %}
       {% continue %}
     {% else %}
-        <div>
-            {{ i }}
-        </div>
+      <div>
+        {{ i }}
+      </div>
     {% endif %}
   {% endfor %}
 
   {% comment %} cycle {% endcomment %}
-   {% for i in section.settings.max_number %}
+  {% for i in section.settings.max_number %}
     {% cycle 'one', 'two', 'three' %}
-   {% endfor %}
+  {% endfor %}
 </div>
 
 <script>
