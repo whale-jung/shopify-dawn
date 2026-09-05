@@ -75,12 +75,14 @@
   {% endfor %}
 
   {% comment %} paginate {% endcomment %}
-  {% comment %} {% assign paginate_data = (1..21) %}
-  {% paginate paginate_data by 4 %}
-    {% for item in paginate_data %}
-      {{ item }}
-    {% endfor %}
-  {% endpaginate %} {% endcomment %}
+  {% comment %}
+    {% assign paginate_data = (1..21) %}
+    {% paginate paginate_data by 4 %}
+      {% for item in paginate_data %}
+        {{ item }}
+      {% endfor %}
+    {% endpaginate %}
+  {% endcomment %}
 
   {% # this is a comment %}
   {% liquid
@@ -94,7 +96,7 @@
   {% liquid
     assign test = 'test??'
     echo test
-   %}
+  %}
 </div>
 
 <script>
