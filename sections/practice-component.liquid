@@ -98,7 +98,21 @@
     echo test
   %}
 
-  {}
+  {% liquid
+    assign type = 'Health' | downcase
+    assign message = ''
+
+    case type
+      when 'health'
+        assign message = 'this is a health potion'
+      when 'love'
+        assign message = 'this is a love potion'
+      else
+        assign message = 'this is a potion'
+    endcase
+
+    echo message
+  %}
 </div>
 
 <script>
