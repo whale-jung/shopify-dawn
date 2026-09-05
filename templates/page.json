@@ -20,7 +20,9 @@
       "type": "practice-component",
       "name": "practice-component",
       "settings": {
-        "practice_component": "test"
+        "practice_component": "test",
+        "max_number": 8,
+        "limit_number": 8
       }
     }
   },
