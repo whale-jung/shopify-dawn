@@ -53,6 +53,11 @@
         </div>
     {% endif %}
   {% endfor %}
+
+  {% comment %} cycle {% endcomment %}
+   {% for i in section.settings.max_number %}
+    {% cycle 'one', 'two', 'three' %}
+   {% endfor %}
 </div>
 
 <script>
