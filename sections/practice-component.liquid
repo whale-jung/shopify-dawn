@@ -44,7 +44,8 @@
 
   {% comment %} continue：退出本次循环，进入下一次循环 {% endcomment %}
   {% for i in (1..section.settings.max_number) %}
-    {% if i == 2 %}
+    {% assign reminder = i | modulo: 2 %}
+    {% if reminder == 0 %}
       {% continue %}
     {% else %}
         <div>
