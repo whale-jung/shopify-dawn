@@ -55,7 +55,7 @@
   {% endfor %}
 
   {% comment %} cycle {% endcomment %}
-  {% for i in section.settings.max_number %}
+  {% for i in (1..section.settings.max_number) %}
     {% cycle 'one', 'two', 'three' %}
   {% endfor %}
 </div>
