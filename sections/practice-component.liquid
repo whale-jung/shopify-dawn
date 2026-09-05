@@ -75,8 +75,8 @@
   {% endfor %}
 
   {% comment %} paginate {% endcomment %}
-  {% paginate product by 2 %}
-    {% for item in product %}
+  {% paginate section.settings.product_storage by 2 %}
+    {% for item in section.settings.product_storage %}
       {{ item }}
     {% endfor %}
   {% endpaginate %}
@@ -134,6 +134,11 @@
       "id": "limit_number",
       "label": "limit_number",
       "default": 3
+    },
+    {
+        "type": "product_list",
+        "id": "product_storage",
+        "label": "product storage",
     }
   ],
   "presets": [
