@@ -31,7 +31,7 @@
     <button type="submit">ENTER</button>
   {% endform %}
 
-  {% for i in (1..5) %}
+  {% for i in (1..section.settings.max_number) %}
     {% if i == 4 %}
       {% break %}
     {% else %}
@@ -82,6 +82,12 @@
       "id": "practice_component",
       "label": "Practice Component",
       "default": "Practice Component"
+    },
+    {
+        "type": "number",
+        "id": "max_number",
+        "label": "Max Number",
+        "default": 5
     }
   ],
   "presets": [
