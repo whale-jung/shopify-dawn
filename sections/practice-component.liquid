@@ -127,6 +127,9 @@
     {% break %}
   {% endif %}
   <div>rest content</div>
+
+  {% comment %} content_for {% endcomment %}
+  {% content_for "block", type: "button", id: "static-block-1", color: "red" %}
 </div>
 
 <script>
