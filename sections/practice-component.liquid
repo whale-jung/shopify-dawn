@@ -155,9 +155,10 @@
   {% assign num = 5 %}
   {% decrement num %}
   {% decrement num %}
-  
-  {}
-  
+
+  {% assign mix_num_list = '1,null,3,test,false' | split: ',' %}
+
+  {{ mix_num_list }}
 </div>
 
 <script>
