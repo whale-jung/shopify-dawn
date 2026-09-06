@@ -142,12 +142,12 @@
   {% assign up_title = title | upcase %}
   {% assign down_title = title | downcase %}
   {% assign show_up_title = true %}
-  {%- capture title -%}
-  {% if show_up_title -%}
+  {% capture title -%}
+  {% if show_up_title %}
     Upcase title: {{ up_title }}
-  {%- else -%}
+  {% else %}
     Downcase title: {{ down_title }}
-  {%- endif %}
+  {% endif %}
 {%- endcapture %}
 
   {{ title }}
