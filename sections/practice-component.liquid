@@ -166,6 +166,11 @@
   {% assign str_len = str | size %}
   {{ str_len }}
   {{ str.size }}
+
+  {% assign sort_list = list | sort: 'title' %}
+
+  {% assign num_sum = '1, 3, 5, 7' | sum %}
+  {{ num_sum }}
 </div>
 
 <script>
