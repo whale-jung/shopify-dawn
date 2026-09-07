@@ -160,7 +160,12 @@
 
   {{ mix_num_list }}
 
-  {}
+  {% assign concat_list = list01 | reject: 'title', 'header' %}
+
+  {% assign str = 'hello' %}
+  {% assign str_len = str | size %}
+  {{ str_len }}
+  {{ str.size }}
 </div>
 
 <script>
