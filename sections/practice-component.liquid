@@ -190,7 +190,8 @@
 
   <div>
     {{ '#394667' | brightness_difference: '#ee7647' }}
-    {{ '#eb001b'  }}
+    {{ '#eb001b' | color_brightness }}
+    {{ '#394667' | color_contrast: '#ee7647' }}
   </div>
 </div>
 
