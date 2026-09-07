@@ -177,7 +177,9 @@
   {% assign link_tags = 'extra-potent, fresh, healing, ingredients' | split: ', ' %}
   {{ link_tags }}
 
-  
+  {% for tag in link_tags %}
+    {{ tag | highlight_active_tag | link_to_tag: tag }}
+  {% endfor %}
 </div>
 
 <script>
