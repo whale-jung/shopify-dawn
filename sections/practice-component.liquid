@@ -179,7 +179,7 @@
 
   {% for tag in link_tags %}
     <div>
-      {{ 'tag' | link_to_tag: tag }}
+      {{ tag | highlight_active_tag | link_to_tag: tag }}
     </div>
   {% endfor %}
 </div>
