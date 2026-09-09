@@ -203,6 +203,10 @@
   {% form 'currency' %}
     {{ form | currency_selector }}
   {% endform %}
+
+  {% for product in all_products %}
+    {{ product.title }}
+  {% endfor %}
 </div>
 
 <script>
