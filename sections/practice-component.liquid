@@ -198,13 +198,13 @@
   {{ '#394667' | color_contrast: '#ee7647' }}
   {{ 'Log in' | customer_login_link }}
 
-  {{ 'Shopify?' | link_to: 'https://www.shopify.com', class: 'link-class' }}
+  {{ 'Shopify??' | link_to: 'https://www.shopify.com', class: 'link-class' }}
   {{ '2022-04-14 16:56:02 -0400' | time_tag: '%B %d, %Y' }}
   {% form 'currency' %}
     {{ form | currency_selector }}
   {% endform %}
 
-  {% for product in all_products %}
+  {% for product in all_products limit:10 %}
     {{ product.title }}
   {% endfor %}
 </div>
