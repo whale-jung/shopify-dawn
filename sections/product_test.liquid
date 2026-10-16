@@ -1,6 +1,14 @@
+{% style %}
+  .section-{{ section.id }}-product-card {
+
+  }
+{% endstyle %}
 <div>
   {{ section.settings.introduction | remove: 'healthy' | upcase }}
-  {{ product.title }}
+  <div class="section-{{ section.id }}-product-card">
+      {{ product.title }}
+  </div>
+
 </div>
 {% schema %}
 {
