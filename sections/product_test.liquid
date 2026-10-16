@@ -12,7 +12,12 @@
   </div>
 
   {% assign item = 'shopify developer' %}
-  {{ item }}
+  {{ item | upcase }}
+
+  {% capture paragraph_text %}
+    <div>test01</div>
+    <div>test02</div>
+  {% endcapture %}
 
 </div>
 {% schema %}
