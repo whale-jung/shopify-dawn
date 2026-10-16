@@ -1,23 +1,23 @@
 <div>
-    {{section.settings.introduction | remove: "healthy"}}
+  {{ section.settings.introduction | remove: 'healthy' }}
 </div>
 {% schema %}
 {
-    "name": "product-card",
-    "tag": "section",
-    "class": "section",
-    "settings": [
-        {
-            "type": "text",
-            "label": "introduction",
-            "id": "introduction",
-            "default": "this is a product"
-        }
-    ],
-    "presets": [
-        {
-            "name": "product_test"
-        }
-    ]
+  "name": "product-card",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "introduction",
+      "id": "introduction",
+      "default": "this is a product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "product_test"
+    }
+  ]
 }
 {% endschema %}
