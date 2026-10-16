@@ -1,11 +1,13 @@
 {% style %}
   .section-{{ section.id }}-product-card {
-
+    border: #ccc;
+    border-radius: 20px;
   }
 {% endstyle %}
 <div>
   {{ section.settings.introduction | remove: 'healthy' | upcase }}
   <div class="section-{{ section.id }}-product-card">
+        test
       {{ product.title }}
   </div>
 
