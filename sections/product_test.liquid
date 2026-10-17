@@ -3,6 +3,11 @@
     border: #ccc;
     border-radius: 20px;
   }
+
+  .card-section {
+    background-color: #f5f5f5;
+    border-radius: 20px;
+  }
 {% endstyle %}
 <div>
   {{ section.settings.introduction | remove: 'healthy' | upcase }}
@@ -31,7 +36,7 @@
 {
   "name": "product-card",
   "tag": "article",
-  "class": "section",
+  "class": "card-section",
   "settings": [
     {
       "type": "text",
