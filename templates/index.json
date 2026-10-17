@@ -23,7 +23,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -31,10 +31,7 @@
           }
         }
       },
-      "block_order": [
-        "heading",
-        "button"
-      ],
+      "block_order": ["heading", "button"],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -106,7 +103,7 @@
         "text_9YbgHT": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
           }
         },
         "button_QNEVBL": {
@@ -121,11 +118,7 @@
           }
         }
       },
-      "block_order": [
-        "heading_yg7YT8",
-        "text_9YbgHT",
-        "button_QNEVBL"
-      ],
+      "block_order": ["heading_yg7YT8", "text_9YbgHT", "button_QNEVBL"],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "desktop_content_position": "center",
@@ -139,9 +132,7 @@
     "product_test_Bme4h4": {
       "type": "product_test",
       "name": "product_test",
-      "settings": {
-        "introduction": "this is a healthy product"
-      }
+      "settings": { "introduction": "this is a healthy product" }
     }
   },
   "order": [
