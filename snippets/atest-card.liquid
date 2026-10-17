@@ -1,0 +1,12 @@
+{% comment %}
+  render test card
+
+  Accepts:
+  - title: {String} card's title
+  - description: {String} card's description
+{% endcomment %}
+
+{% if atest_card and atest_card != empty %}
+  {{ atest_card.title }}
+  {{ atest_card.description }}
+{% endif %}
