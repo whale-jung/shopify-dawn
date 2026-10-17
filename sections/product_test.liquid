@@ -18,6 +18,12 @@
     <div>test01</div>
     <div>test02</div>
   {% endcapture %}
+  {{ paragraph_text }}
+
+  {% render 'atest-card',
+    title: "test card",
+    description: "this is a test card"
+   %}
 
 </div>
 {% schema %}
