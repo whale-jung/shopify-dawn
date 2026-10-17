@@ -21,8 +21,8 @@
   {{ paragraph_text }}
 
   {% render 'atest-card',
-    title: "test card",
-    description: "this is a test card"
+    title: section.settings.title,
+    description: section.settings.description
    %}
 
   test324
@@ -38,6 +38,18 @@
       "label": "introduction",
       "id": "introduction",
       "default": "this is a product"
+    },
+    {
+      "type": "text",
+      "label": "title",
+      "id": "title",
+      "default": "Test Title"
+    },
+    {
+      "type": "text",
+      "label": "description",
+      "id": "description",
+      "default": "Test Description"
     }
   ],
   "presets": [
